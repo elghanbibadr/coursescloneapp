@@ -1,0 +1,846 @@
+:root {
+    --bodyBg: #edf2f9;
+    --navbar: rgba(237, 242, 249, 0.96);
+    --greenBadge: #00864e;
+    --link-color: #2c7be5;
+    --headingcolor: #344050;
+    --badgeSoftWarningBg: #fde6d8;
+    --badgeSoftWarningColor: #9d5228;
+    --badge-soft-success-color: #00864e;
+    --badge-soft-success-background-color: #ccf6e4;
+    --badge-soft-primary-background-color: #d5e5fa;
+    --badge-soft-primary-color: #1c4f93;
+    --textColor: #5e6e82;
+    /* breakpoint */
+}
+
+
+
+/* GENERAL */
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    cursor: pointer;
+}
+
+body {
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bodyBg) !important;
+    /* height: 100vh; */
+}
+
+
+/* BADGES */
+
+.mybadge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    height: 20px !important;
+    display: flex;
+    width: fit-content;
+    /* justify-content: space-between; */
+    align-items: center;
+    font-weight: 500;
+}
+
+.mybadge svg {
+    height: 14px;
+    margin-inline: 3px !important;
+}
+
+#badge__success {
+    background-color: var(--badge-soft-primary-background-color) !important;
+    color: var(--badge-soft-primary-color);
+
+}
+
+#badge__green {
+    background-color: var(--badge-soft-success-background-color);
+    color: var(--badge-soft-success-color)
+}
+
+#badge__orange {
+    background-color: var(--badgeSoftWarningBg);
+    color: var(--badgeSoftWarningColor);
+}
+
+
+/* BUTTONS */
+.mybtn {
+    display: flex;
+    font-size: 1.4rem;
+    padding: 6px 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.btn--addToWishList {
+    border: 1px solid white;
+    opacity: 0.7;
+
+    color: #5e6e82;
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1), 0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+
+
+}
+
+.btn--addToCart {
+    background-color: var(--link-color);
+    color: white;
+}
+
+.mybtn img {
+    height: 14px;
+    margin-right: 3px;
+}
+
+
+/* TYPOGRAPHY */
+
+p {
+    font-size: 1.4rem;
+    color: var(--textColor);
+}
+
+@media screen and (min-width: 768px) {
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+
+h4 {
+    font-size: 2rem;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+h5 {
+    color: #2c7be5;
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+
+/* COURSE CARD */
+.fa-star-half-alt,
+.fa-star {
+    height: 12px;
+}
+
+.reviewNumbers {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+.onsale {
+    margin-inline: 10px !important;
+}
+
+@media screen and (min-width: 968px) {
+
+    .homePagemain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1.5rem;
+    }
+
+
+    .gridx2 {
+        grid-column: span 3;
+    }
+}
+
+.course {
+    padding: 10px;
+    /* max-width: 1000px; */
+    /* margin-inline: auto; */
+    background-color: white !important;
+    margin-bottom: 1.6rem;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1),
+        0 2px 5px 0 rgba(43, 45, 80, 0.08),
+        0 1px 1.5px 0 rgba(0, 0, 0, 0.07),
+        0 1px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (min-width:768px) {
+    .course {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        /* align-items: center; */
+        /* align-content: center; */
+    }
+}
+
+.course__reviews {
+    display: flex;
+    align-items: center;
+}
+
+.course__reviews p {
+    margin-left: 10px;
+}
+
+.course__priceContainer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course__price {
+    color: #f5803e;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.course__priceBox {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .course__priceContainer {
+        flex-direction: column;
+        /* align-self: center; */
+        justify-self: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 14px;
+
+    }
+
+    .course__desc {
+        grid-column: span 2;
+        margin-left: 1.8rem;
+    }
+
+    .course__desc p {
+        margin-block: 10px;
+    }
+
+    .course__btnsBox {
+        flex-direction: column;
+    }
+
+    .course__btnsBox button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.course__priceBox p {
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.course__btnsBox {
+    display: flex;
+    align-items: center;
+}
+
+.course__btnsBox .btn--addToWishList {
+    margin-inline: 12px;
+}
+
+.course__btnsBox button {
+    padding: 9px 12px;
+}
+
+.course__image {
+    width: 100%;
+    height: 100%;
+}
+
+.course__badges {
+    display: flex;
+    margin-block: 16px;
+}
+
+.course__badges span {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+/* RESUABLE CLASSES  */
+
+
+.mycontainer {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
+.resetIcon {
+    height: 16px;
+    margin-right: 6px;
+}
+
+.hiddenForMobiles {
+    display: none;
+}
+
+img {
+    object-fit: cover;
+}
+
+.mycard {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 1.6rem;
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1), 0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .hiddenForMobiles {
+        display: block;
+    }
+}
+
+.hiddenForDesktop {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hiddenForDesktop {
+        display: block;
+    }
+}
+
+
+
+/* FILTER BAR */
+/* Style for the custom select container */
+
+
+.filterBar {
+    display: flex !important;
+    justify-content: space-between !important;
+    /* padding: ; */
+    background-image: url(/assets/illustration.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+
+}
+
+.leftFilerBar {
+    display: none;
+}
+
+
+@media screen and (min-width: 968px) {
+    .leftFilerBar {
+        display: block;
+        /* width: 80%; */
+        /* justify-self: end; */
+    }
+}
+
+.filterBar .input-group {
+    /* width: 50%; */
+}
+
+.filterBar h4 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.dropdown {
+    width: 100px !important;
+    align-self: flex-end;
+}
+
+
+
+
+/* NAV */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav__logo {
+    height: 40px;
+}
+
+.nav__logoBox {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logoText {
+    color: #2c7be5;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-left: 5px;
+}
+
+.userProfil {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+.nav__list {
+    display: inherit;
+    align-items: center;
+}
+
+
+
+/* LEFT  FILER BAR */
+.selectedFilterOptionBox {
+    background-color: rgb(216, 226, 239) !important;
+    width: fit-content;
+    padding: 4px 8px;
+    font-size: 1.3rem;
+    margin-block: 2rem;
+    text-wrap: nowrap !important;
+    border-radius: 4px;
+    color: var(--textColor);
+    font-weight: bold;
+
+}
+
+.selectedFilterOptionBox svg {
+    height: 12px;
+    margin-left: 4px;
+}
+
+.filterlist {
+    border-bottom: 1px solid #cccccc67;
+    padding-left: 2rem !important;
+
+    /* width: fit-content !important; */
+}
+
+.filterlist-form input {
+    /* margin-right: 100px !important; */
+}
+
+.resetFilterBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn--reset {
+    border: 1px solid var(--textColor) !important;
+    font-size: 1.5rem !important;
+    color: var(--textColor) !important;
+    font-weight: 500 !important;
+    padding-inline: 1.3rem !important;
+}
+
+
+
+.filterlist-form {
+    font-size: 1.3rem;
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 1.5rem;
+    /* width: 80%; */
+    justify-content: space-between !important;
+
+}
+
+.filterlist-form img {
+    height: 15px;
+    margin-right: 10px;
+}
+
+.resetFilterBox,
+.selectedFilterOptionBox-wrraper {
+    margin-left: 2rem !important;
+}
+
+.filterlist-form label {
+    color: var(--textColor);
+    font-weight: bold;
+    /* margin-right: 70px !important; */
+}
+
+.filterlist-title {
+    color: var(--textColor);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+
+/* COURSE DETAILS PAGE STYLING */
+.course-featureBox {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.course-featureCard {
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+@media screen and (min-width: 768px) {
+    .course-featureBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .course-featureCard {
+        text-align: left;
+        padding: 2rem 1rem;
+    }
+}
+
+
+.course-featureCard h3 {
+    color: #2c7be5;
+    font-size: 1.8rem;
+    margin-block: 10px !important;
+}
+
+
+/* COURSE CONTENT */
+.courseContent__price {
+    color: var(--headingcolor);
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+
+.courseContent__priceBox p {
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.priceEnd {
+    color: rgb(230, 55, 87);
+
+}
+
+.priceEnd svg {
+    height: 16px;
+    margin-right: 10px !important;
+}
+
+#btn--purchasecourse {
+    color: white;
+    margin-bottom: 1rem;
+    background-color: #2c7be5;
+    font-size: 1.7rem;
+}
+
+
+.coursecontent {
+    /* padding: 20px; */
+    padding: 0 !important;
+}
+
+.coursecontent ul {
+    border-top: 1px dotted #ccc !important;
+}
+
+.priceEnd {
+    margin-block: 1rem !important;
+}
+
+.withpadding {
+    padding: 10px !important;
+}
+
+.planDreamBox {
+    border-radius: 10px !important;
+}
+
+.coursecontent ul :first-child {
+    color: var(--headingcolor) !important;
+    font-weight: bold;
+    font-size: 1.6rem !important;
+}
+
+.coursecontent ul li {
+    color: var(--textColor);
+    font-size: 1.3rem;
+    margin-block: 10px;
+    font-weight: 400;
+}
+
+.coursecontent img {
+    height: 10px;
+}
+
+
+.socialMediaLinks {
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.socialMediaLinks li {
+    /* padding: 5px; */
+    /* border-radius: 50%; */
+}
+
+.socialMediaLinks img {
+
+    height: 14px;
+}
+
+.course-featureBox {
+    margin-block: 16px;
+    padding: 10px;
+}
+
+.planDreamBox {
+    /* background-color: rgb(249, 250, 253); */
+}
+
+.planDreamBox h2 {
+    font-size: 2.3rem;
+
+}
+
+
+/* coursewillTeachu */
+.coursewillTeachu {
+    /* padding: 0 !important; */
+    padding-inline: 0 !important;
+    padding-bottom: 3px !important;
+    padding-top: 0 !important;
+}
+
+
+.coursewillTeachu__header,
+.planDreamBox {
+    display: flex;
+    padding: 10px;
+    background-color: rgb(249, 250, 253);
+
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.coursewillTeachu__header h2,
+.planDreamBox h2 {
+    color: var(--headingcolor) !important;
+    font-size: 2.1rem;
+}
+
+.coursewillTeachu ul li {
+    color: var(--textColor);
+    font-size: 1.3rem;
+    margin-block: 10px;
+    font-weight: 400;
+
+}
+
+.coursewillTeachu ul {
+    margin: 20px !important;
+    /* margin-bottom: 2rem !important; */
+    list-style: disc;
+    padding-inline: 10px !important;
+}
+
+
+
+.coursewillTeachu button #arrowIcon {
+    /* display: block !important; */
+    margin-inline: auto !important;
+
+}
+
+.coursewillTeachu button span {
+    margin-right: 5px !important;
+}
+
+.coursewillTeachu button {
+
+    border: 1px solid white;
+    opacity: 0.7;
+    color: #5e6e82;
+    background-color: white;
+    padding-inline: 12px !important;
+    box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1), 0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+.coursewillTeachu ul:last-child {
+    margin-bottom: 40px !important;
+}
+
+/* COURSE PREVIEW */
+.coursepreview {
+    /* background-color: black; */
+    padding: 16px;
+    background-image: url("/assets/coursepreviewbg.png") !important;
+    background-position: center;
+}
+
+.coursepreview h3 {
+    color: rgb(39, 188, 253);
+}
+
+
+.coursepreview .reviewNumbers {
+    color: rgb(182, 193, 210) !important;
+
+}
+
+.coursepreview .totalReviews {
+    color: rgb(39, 188, 253);
+    margin-top: 10px;
+
+}
+
+.coursepreview h1 {
+    font-size: 3rem;
+    color: white !important;
+    font-weight: bold;
+}
+
+.coursepreview p,
+.courseby {
+    /* color: var(--textColor) !important; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(182, 193, 210) !important;
+}
+
+.coursepreview img {
+    width: 90%;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 6px;
+
+}
+
+
+
+.coursepreview {
+    border-radius: 6px;
+}
+
+
+@media (min-width: 768px) {
+    .coursepreview {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+}
+
+
+/* .coursepreview__content {
+     !important;
+} */
+
+/* FIX STYLES */
+
+
+.mybadge {
+    white-space: nowrap;
+}
+
+.course {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.gridx3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+
+
+
+.course-featureBox {
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width:786px) {
+
+    .wrraper1 {
+        width: 70% !important;
+    }
+
+    .flex3 {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .coursecontent {
+        margin-top: 1rem !important;
+        /* width: 100%; */
+        width: 27%;
+        position: relative;
+        bottom: 10rem;
+        order: 2 !important;
+    }
+}
+
+#btn--purchasecourse {
+    padding: 10px;
+    /* Adjust the value to match your button's height */
+
+    width: 100%;
+    /* text-align: center !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
